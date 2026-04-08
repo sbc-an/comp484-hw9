@@ -50,6 +50,8 @@ let formattingText = "";
 formattingText += "Number.parseFloat(\"12345.67890abcdefg.hijklmnopqrs.tuvwxyz\")<br/>= "+mathNum0+"<br/>";
 formattingText += "Number.parseInt(\"0x7fff\", 16)<br/>= "+mathNum1+"<br/>";
 formattingText += mathNum0+".toFixed(2)<br/>= "+mathNum0.toFixed(2)+"<br/>";
+formattingText += mathNum0+" + "+mathNum2+"<br/>= "+(mathNum0 + mathNum2)+"<br/>";
+formattingText += mathNum0+" * "+mathNum2+"<br/>= "+(mathNum0 * mathNum2)+"<br/>";
 formattingText += mathNum0+".toLocaleString(\"en-US\")<br/>= "+mathNum0.toLocaleString("en-US")+"<br/>";
 formattingText += mathNum0+".toLocaleString(\"de-DE\")<br/>= "+mathNum0.toLocaleString("de-DE")+"<br/>";
 document.getElementById("formatting").innerHTML = formattingText;
