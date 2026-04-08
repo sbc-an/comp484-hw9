@@ -2,7 +2,7 @@
 
 // part 1
 let currentDate = new Date(Date.now());
-let yearInumber4Digits = currentDate.getFullYear() % 10000; // in case this is executed past 101st century for whatever reason
+let yearIn4Digits = currentDate.getFullYear() % 10000; // in case this is executed past 101st century for whatever reason
 let dateText = "";
 
 if (currentDate.getMonth() < 9)
@@ -13,13 +13,13 @@ if (currentDate.getDate() < 10)
     dateText += "0";
 dateText += currentDate.getDate();
 dateText += "/";
-if (yearInumber4Digits < 10)
+if (yearIn4Digits < 10)
     dateText += "0";
-if (yearInumber4Digits < 100)
+if (yearIn4Digits < 100)
     dateText += "0";
-if (yearInumber4Digits < 1000)
+if (yearIn4Digits < 1000)
     dateText += "0";
-dateText += yearInumber4Digits;
+dateText += yearIn4Digits;
 document.getElementById("date").innerHTML = dateText;
 
 // part 2
