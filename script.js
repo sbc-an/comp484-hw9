@@ -6,12 +6,14 @@ let yearIn4Digits = currentDate.getFullYear() % 10000; // in case this is execut
 let dateText = "";
 
 if (currentDate.getMonth() < 9)
-    dateText += "0";
-dateText += currentDate.getMonth() + 1;
+    dateText += "0" + (currentDate.getMonth() + 1);
+else // part 4 #1
+    dateText += currentDate.getMonth() + 1;
 dateText += "/";
 if (currentDate.getDate() < 10)
-    dateText += "0";
-dateText += currentDate.getDate();
+    dateText += "0" + currentDate.getDate();
+else // part 4 #2. not a very optimal use of else. see below 4-digit checker
+    dateText += currentDate.getDate();
 dateText += "/";
 if (yearIn4Digits < 10)
     dateText += "0";
